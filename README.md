@@ -11,7 +11,7 @@ Oct 6th, 2017
 
 ## Speakers
 [**Xun Tang**](https://www.linkedin.com/in/xuntang/)
-Software Engineer, Yelp Inc.
+Machine Learning Engineer, Yelp Inc.
 
 Xun Tang is a Software Engineer at Yelp focusing on Ads Creative. On a daily
 basis, she uses Jupyter Notebooks to analyze data and train models to optimize
