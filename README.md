@@ -5,10 +5,13 @@ Oct 6th, 2017
 
 ## Event
 [Grace Hopper 2017](https://ghc.anitab.org/)
+
 [DS521: A Hands-on Dive into Making Sense of Real World Data](https://www.eiseverywhere.com/ehome/index.php?eventid=212774&tabid=556987&cid=1738254&sessionid=16582679&sessionchoice=1&)
 
 ## Links
 [Slides](tbd)
+
+
 
 ## Speakers
 [**Xun Tang**](https://www.linkedin.com/in/xuntang/)
