@@ -24,7 +24,7 @@
 
 # # Step 1: Load the Data
 # 
-# We store aata in Pandas DataFrames.
+# We store data in Pandas DataFrames.
 # 
 # We load three types of data from the dataset, each stored in a separate df.
 # 
@@ -336,6 +336,8 @@ features = X.columns.values
 # 
 # - Training set: used for an machine learning algorithm to train from. 
 # - Testing set: used to to estimate / evaluate how well the model has been trained.
+# 
+# Split them so that we don’t evaluate on the same dataset we train from
 
 # In[172]:
 
@@ -384,7 +386,7 @@ X_test_scaled = scaler.transform(X_test)
 
 # ## 4.5 Cross Validation
 # 
-# Holding out a portion of the training data for model evaluation, and do this for `n_folds`.
+# Holding out a portion of the training data for model validation, and do this for `n_folds`.
 # - Ensure that the model does not overfit the training data.
 # - Select optimal model parameters.
 
@@ -566,9 +568,9 @@ predict_given_user_biz(user=user2, biz=biz2, review_df=review_df)
 predict_given_user_biz(user=user3, biz=biz2, review_df=review_df)
 
 
-# # Step 6 & Beyond: Loop Through the Process
+# # Step 6 & Beyond: Iterate Through the Process
 # 
-# First trial usually won’t be the best. We usually loop through the above steps multiple times, each time we look at the features, find out feature correlations, add / remove / adjust feature representation, change the model to use, or do parameter tuning for the model, etc. 
+# First trial usually won’t be the best. We usually do multiple iterations. Each time we look at the features, find out feature correlations, add / remove / adjust feature representation, change the model to use, or do parameter tuning for the model, etc. 
 
 # # Try out Yelp Dataset Challenge Round 10
 # 

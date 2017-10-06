@@ -11778,7 +11778,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Step-1:-Load-the-Data">Step 1: Load the Data<a class="anchor-link" href="#Step-1:-Load-the-Data">&#182;</a></h1><p>We store aata in Pandas DataFrames.</p>
+<h1 id="Step-1:-Load-the-Data">Step 1: Load the Data<a class="anchor-link" href="#Step-1:-Load-the-Data">&#182;</a></h1><p>We store data in Pandas DataFrames.</p>
 <p>We load three types of data from the dataset, each stored in a separate df.</p>
 <p><code>set_index()</code>: tells pandas to index the review df by the column named <code>review_id</code>.</p>
 
@@ -12863,6 +12863,7 @@ nakUEREJgY8fP1JQUEBHRwd2uz3U5YiIiARMZypFREREREQkYDpTKSIiIiIiIgHTUCkiIiIiIiIB
 <li>Training set: used for an machine learning algorithm to train from. </li>
 <li>Testing set: used to to estimate / evaluate how well the model has been trained.</li>
 </ul>
+<p>Split them so that we don’t evaluate on the same dataset we train from</p>
 
 </div>
 </div>
@@ -13017,7 +13018,7 @@ features [&#39;funny_review&#39; &#39;useful_review&#39; &#39;cool_review&#39; &
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="4.5-Cross-Validation">4.5 Cross Validation<a class="anchor-link" href="#4.5-Cross-Validation">&#182;</a></h2><p>Holding out a portion of the training data for model evaluation, and do this for <code>n_folds</code>.</p>
+<h2 id="4.5-Cross-Validation">4.5 Cross Validation<a class="anchor-link" href="#4.5-Cross-Validation">&#182;</a></h2><p>Holding out a portion of the training data for model validation, and do this for <code>n_folds</code>.</p>
 <ul>
 <li>Ensure that the model does not overfit the training data.</li>
 <li>Select optimal model parameters.</li>
@@ -13803,7 +13804,7 @@ False , with probability [False, True] ==  [ 0.9668934  0.0331066]
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Step-6-&amp;-Beyond:-Loop-Through-the-Process">Step 6 &amp; Beyond: Loop Through the Process<a class="anchor-link" href="#Step-6-&amp;-Beyond:-Loop-Through-the-Process">&#182;</a></h1><p>First trial usually won’t be the best. We usually loop through the above steps multiple times, each time we look at the features, find out feature correlations, add / remove / adjust feature representation, change the model to use, or do parameter tuning for the model, etc.</p>
+<h1 id="Step-6-&amp;-Beyond:-Iterate-Through-the-Process">Step 6 &amp; Beyond: Iterate Through the Process<a class="anchor-link" href="#Step-6-&amp;-Beyond:-Iterate-Through-the-Process">&#182;</a></h1><p>First trial usually won’t be the best. We usually do multiple iterations. Each time we look at the features, find out feature correlations, add / remove / adjust feature representation, change the model to use, or do parameter tuning for the model, etc.</p>
 
 </div>
 </div>
