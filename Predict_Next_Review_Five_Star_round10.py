@@ -333,6 +333,9 @@ features = X.columns.values
 
 
 # ## 4.2 Split Training and Testing Set
+# 
+# - Training set: used for an machine learning algorithm to train from. 
+# - Testing set: used to to estimate / evaluate how well the model has been trained.
 
 # In[172]:
 
@@ -460,14 +463,14 @@ plot_confusion_matrix(cm_normalized, title='Normalized confusion matrix')
 plt.show()
 
 
-# ## 5.3 Make prediction with the model
+# ## 5.3 Make Prediction with the Model
 # 
 # Process: 
 # - Randomly pick a few anonymous users from the dataset.
 # - Randomly pick a few businesses from the dataset.
 # - Predict whether the user will give the business a review with five-star rating.
 
-# In[181]:
+# In[198]:
 
 def predict_given_user_biz(user, biz, review_df):
     a_user = user.copy()
@@ -497,8 +500,9 @@ def predict_given_user_biz(user, biz, review_df):
     a_X_test_scaled = scaler.transform(a_X_test)
     
     a_y_pred = lrc_fit.predict(a_X_test_scaled)
+    a_y_pred_proba = lrc_fit.predict_proba(a_X_test_scaled)
     
-    print a_y_pred[0]
+    print a_y_pred[0], ', with probability [False, True] == ', a_y_pred_proba[0]
 
 
 # In[182]:
@@ -546,7 +550,7 @@ print biz2.stars
 
 # ### Make predictions for user[1,2,3]'s review on biz1
 
-# In[187]:
+# In[199]:
 
 predict_given_user_biz(user=user1, biz=biz1, review_df=review_df)
 predict_given_user_biz(user=user2, biz=biz1, review_df=review_df)
@@ -555,7 +559,7 @@ predict_given_user_biz(user=user3, biz=biz1, review_df=review_df)
 
 # ### Make predictions for user[1,2,3]'s review on biz2
 
-# In[188]:
+# In[200]:
 
 predict_given_user_biz(user=user1, biz=biz2, review_df=review_df)
 predict_given_user_biz(user=user2, biz=biz2, review_df=review_df)

@@ -12859,7 +12859,11 @@ nakUEREJgY8fP1JQUEBHRwd2uz3U5YiIiARMZypFREREREQkYDpTKSIiIiIiIgHTUCkiIiIiIiIB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="4.2-Split-Training-and-Testing-Set">4.2 Split Training and Testing Set<a class="anchor-link" href="#4.2-Split-Training-and-Testing-Set">&#182;</a></h2>
+<h2 id="4.2-Split-Training-and-Testing-Set">4.2 Split Training and Testing Set<a class="anchor-link" href="#4.2-Split-Training-and-Testing-Set">&#182;</a></h2><ul>
+<li>Training set: used for an machine learning algorithm to train from. </li>
+<li>Testing set: used to to estimate / evaluate how well the model has been trained.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -13495,7 +13499,7 @@ gC38fyfUHN63KLrzAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="5.3-Make-prediction-with-the-model">5.3 Make prediction with the model<a class="anchor-link" href="#5.3-Make-prediction-with-the-model">&#182;</a></h2><p>Process:</p>
+<h2 id="5.3-Make-Prediction-with-the-Model">5.3 Make Prediction with the Model<a class="anchor-link" href="#5.3-Make-Prediction-with-the-Model">&#182;</a></h2><p>Process:</p>
 <ul>
 <li>Randomly pick a few anonymous users from the dataset.</li>
 <li>Randomly pick a few businesses from the dataset.</li>
@@ -13507,7 +13511,7 @@ gC38fyfUHN63KLrzAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[181]:</div>
+<div class="prompt input_prompt">In&nbsp;[198]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">predict_given_user_biz</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">biz</span><span class="p">,</span> <span class="n">review_df</span><span class="p">):</span>
@@ -13538,8 +13542,9 @@ gC38fyfUHN63KLrzAAAAAElFTkSuQmCC
     <span class="n">a_X_test_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">a_X_test</span><span class="p">)</span>
     
     <span class="n">a_y_pred</span> <span class="o">=</span> <span class="n">lrc_fit</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">a_X_test_scaled</span><span class="p">)</span>
+    <span class="n">a_y_pred_proba</span> <span class="o">=</span> <span class="n">lrc_fit</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">a_X_test_scaled</span><span class="p">)</span>
     
-    <span class="k">print</span> <span class="n">a_y_pred</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">print</span> <span class="n">a_y_pred</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;, with probability [False, True] == &#39;</span><span class="p">,</span> <span class="n">a_y_pred_proba</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -13724,7 +13729,7 @@ Name: stars, dtype: float64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[187]:</div>
+<div class="prompt input_prompt">In&nbsp;[199]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">predict_given_user_biz</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">user1</span><span class="p">,</span> <span class="n">biz</span><span class="o">=</span><span class="n">biz1</span><span class="p">,</span> <span class="n">review_df</span><span class="o">=</span><span class="n">review_df</span><span class="p">)</span>
@@ -13742,9 +13747,9 @@ Name: stars, dtype: float64
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>True
-True
-False
+<pre>True , with probability [False, True] ==  [ 0.0871309  0.9128691]
+True , with probability [False, True] ==  [ 0.21115779  0.78884221]
+False , with probability [False, True] ==  [ 0.8328338  0.1671662]
 </pre>
 </div>
 </div>
@@ -13764,7 +13769,7 @@ False
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[188]:</div>
+<div class="prompt input_prompt">In&nbsp;[200]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">predict_given_user_biz</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">user1</span><span class="p">,</span> <span class="n">biz</span><span class="o">=</span><span class="n">biz2</span><span class="p">,</span> <span class="n">review_df</span><span class="o">=</span><span class="n">review_df</span><span class="p">)</span>
@@ -13782,9 +13787,9 @@ False
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>True
-False
-False
+<pre>True , with probability [False, True] ==  [ 0.35877821  0.64122179]
+False , with probability [False, True] ==  [ 0.61076983  0.38923017]
+False , with probability [False, True] ==  [ 0.9668934  0.0331066]
 </pre>
 </div>
 </div>

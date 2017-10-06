@@ -11,7 +11,8 @@ Oct 6th, 2017
 ## Links
 [Slides](tbd)
 
-
+## Abstract
+From a user’s past reviews on Yelp, how likely is she to assign a five-star review to a business she has not reviewed before? This workshop teaches you how to solve data science problems like this using Jupyter Notebooks. We will cover common statistical techniques and popular Python libraries for data analysis and machine learning (Pandas, matplotlib, and scikit-learn).
 
 ## Speakers
 [**Xun Tang**](https://www.linkedin.com/in/xuntang/)
