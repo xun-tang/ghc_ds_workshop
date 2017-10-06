@@ -9,7 +9,7 @@ Oct 6th, 2017
 [DS521: A Hands-on Dive into Making Sense of Real World Data](https://www.eiseverywhere.com/ehome/index.php?eventid=212774&tabid=556987&cid=1738254&sessionid=16582679&sessionchoice=1&)
 
 ## Links
-[Slides](tbd)
+[Slides](https://github.com/xun-tang/ghc_ds_workshop/raw/master/ghc_ds_workshop_slides.key)
 
 ## Abstract
 From a user’s past reviews on Yelp, how likely is she to assign a five-star review to a business she has not reviewed before? This workshop teaches you how to solve data science problems like this using Jupyter Notebooks. We will cover common statistical techniques and popular Python libraries for data analysis and machine learning (Pandas, matplotlib, and scikit-learn).
